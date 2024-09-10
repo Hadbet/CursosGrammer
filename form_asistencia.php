@@ -208,7 +208,7 @@
 
       cargarCursosSelect();
       function cargarCursosSelect() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaCursoActualesAsistencia.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaCursoActualesAsistencia.php', function (data) {
           var select = document.getElementById("cbCurso");
           for (var i = 0; i < data.data.length; i++) {
             var createOption = document.createElement("option");
@@ -220,7 +220,7 @@
       }
 
       function cargarCapacidad(Curso,Fecha,HorarioCurso) {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaCursoCapacidadporId.php?curso='+Curso+'&fecha='+Fecha+'&horario='+HorarioCurso, function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaCursoCapacidadporId.php?curso='+Curso+'&fecha='+Fecha+'&horario='+HorarioCurso, function (data) {
           var capacidad = document.getElementById("lblCapacidad");
           capacidad.innerHTML = "Lugares disponibles : "+data.data[0].CapacidadRestante;
         });
@@ -239,7 +239,7 @@
 
         document.getElementById("seccionTomaAsistencia").scrollIntoView({ behavior: 'smooth' });
 
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaCursoAsistencia.php?curso='+Curso+'&fecha='+Fecha+'&horario='+HorarioCurso, function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaCursoAsistencia.php?curso='+Curso+'&fecha='+Fecha+'&horario='+HorarioCurso, function (data) {
           var table = $("#tablaAsistencia"); // selecciona la tabla
           var tableConcluidos = $("#tablaFaltas"); // selecciona la tabla
 
@@ -288,7 +288,7 @@
         $('#txtNominaCurso').keypress(function(event){
           var keycode = (event.keyCode ? event.keyCode : event.which);
           if(keycode == '13'){
-            $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaUsuario.php?nomina=' + generarNomina(document.getElementById("txtNominaCurso").value) , function (data) {
+            $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaUsuario.php?nomina=' + generarNomina(document.getElementById("txtNominaCurso").value) , function (data) {
               if (data && data.data && data.data.length > 0) {
                 var curso = document.getElementById("cbCurso").value;
 
@@ -363,7 +363,7 @@
         var Fecha = horarioParts[1].trim();
         var HorarioCurso = horarioParts[2].trim();
 
-        var link = "https://arketipo.mx/RH/CursosRH/pruebaPDF.php?curso="+Curso+"&horario="+HorarioCurso+"&fecha="+Fecha;
+        var link = "https://grammermx.com/RH/Cursos/pruebaPDF.php?curso="+Curso+"&horario="+HorarioCurso+"&fecha="+Fecha;
 
         window.open(link, '_blank');
       }

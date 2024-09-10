@@ -157,7 +157,7 @@
 
     cargarEmpleado();
     function cargarEmpleado() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaPerfil.php?nomina=00001606', function (data){
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaPerfil.php?nomina=00001606', function (data){
 
             var nombre = data.data.length > 0 ? data.data[0].Nombre : '';
             var email = data.data.length > 0 ? data.data[0].Email : '';
@@ -179,7 +179,7 @@
     }
     cargarCursos();
     function cargarCursos() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaCursoUsuario.php?nomina=00001606', function (data){
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaCursoUsuario.php?nomina=00001606', function (data){
             for (var i = 0; i < data.data.length; i++) {
                 if (data.data[i].EstatusAsistencia==="3"){
                     if (data.data[i].Evaluacion>9){estatusImagen = "primero";}

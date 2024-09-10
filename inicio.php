@@ -345,7 +345,7 @@
     asistencias();
 
     function asistencias() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaAsistencia.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaAsistencia.php', function (data) {
 
             var aEne = 0, aFeb = 0, aMar = 0, aAbril = 0, aMay = 0, aJun = 0, aJul = 0, aAgo = 0,
                 aSep = 0, aOct = 0, aNov = 0, aDic = 0;
@@ -393,7 +393,7 @@
     }
 
     function inasistencias(aEne, aFeb, aMar, aAbril, aMay, aJun, aJul, aAgo, aSep, aOct, aNov, aDic) {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaInasistencia.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaInasistencia.php', function (data) {
 
             var iEne = 0, iFeb = 0, iMar = 0, iAbril = 0, iMay = 0, iJun = 0, iJul = 0, iAgo = 0,
                 iSep = 0, iOct = 0, iNov = 0, iDic = 0;
@@ -495,7 +495,7 @@
     contadores();
 
     function contadores() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaContadores.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaContadores.php', function (data) {
 
             for (var i = 0; i < data.data.length; i++) {
                 document.getElementById("txtAsistencia").innerHTML = data.data[i].Asistencias;
@@ -508,7 +508,7 @@
     }
     contadoresApu();
     function contadoresApu() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaContadoresApu.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaContadoresApu.php', function (data) {
             var asistenciaApu1,inasistenciaApu1,totalApu1,porcentaje;
             var asistenciaApu2,inasistenciaApu2,totalApu2,porcentaje2;
             var asistenciaApu3,inasistenciaApu3,totalApu3,porcentaje3;
@@ -782,7 +782,7 @@
 
     ausentismos();
     function ausentismos() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/ausentismo/consultaAusentismos.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/ausentismo/consultaAusentismos.php', function (data) {
 
             var Ene1 = 0, Feb1 = 0, Mar1 = 0, Abril1 = 0, May1 = 0, Jun1 = 0, Jul1 = 0, Ago1 = 0,
                 Sep1 = 0, Oct1 = 0, Nov1 = 0, Dic1 = 0;
@@ -882,7 +882,7 @@
 
     Apu();
     function Apu() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/ausentismo/consultaApu.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/ausentismo/consultaApu.php', function (data) {
 
             var Ene1 = 0, Feb1 = 0, Mar1 = 0, Abril1 = 0, May1 = 0, Jun1 = 0, Jul1 = 0, Ago1 = 0,
                 Sep1 = 0, Oct1 = 0, Nov1 = 0, Dic1 = 0;
@@ -1077,7 +1077,7 @@
 
     capacitacionHoras();
     function capacitacionHoras() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaCapacitacionTotal.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaCapacitacionTotal.php', function (data) {
 
             var Ene1 = 0, Feb1 = 0, Mar1 = 0, Abril1 = 0, May1 = 0, Jun1 = 0, Jul1 = 0, Ago1 = 0,
                 Sep1 = 0, Oct1 = 0, Nov1 = 0, Dic1 = 0;
@@ -1180,7 +1180,7 @@
 
     contadoresEfi();
     function contadoresEfi() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaApuEficiencia.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaApuEficiencia.php', function (data) {
             var aprobadosApu1,reprobadosApu1,totalApu1,porcentaje;
             var aprobadosApu2,reprobadosApu2,totalApu2,porcentaje2;
             var aprobadosApu3,reprobadosApu3,totalApu3,porcentaje3;

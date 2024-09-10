@@ -458,7 +458,7 @@
     }
 
     function cargarCursos() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaNombre.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaNombre.php', function (data) {
             var select = document.getElementById("cbCurso");
             var table = $("#tablaCursos"); // selecciona la tabla
             for (var i = 0; i < data.data.length; i++) {
@@ -483,7 +483,7 @@
     var instructores = {};
     cargarInstructor();
     function cargarInstructor() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaInstructor.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaInstructor.php', function (data) {
             var select = document.getElementById("cbInstructor");
             var table = $("#tablaInstructores"); // selecciona la tabla
             for (var i = 0; i < data.data.length; i++) {
@@ -532,7 +532,7 @@
     });
 
     function cargarDetalles(nombre,tipo,area) {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaDocumentos.php?nombre='+nombre, function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaDocumentos.php?nombre='+nombre, function (data) {
             document.getElementById("defaultModalLabel").innerHTML = nombre;
             document.getElementById("txtTipoL").innerHTML = " "+tipo;
             document.getElementById("txtAreaL").innerHTML = " "+area;
@@ -594,7 +594,7 @@
     }
     cargarHorarios();
     function cargarHorarios() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaHorario.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaHorario.php', function (data) {
             var select = document.getElementById("cbHorario");
             var table = $("#tablaHorarios"); // selecciona la tabla
             for (var i = 0; i < data.data.length; i++) {
@@ -702,7 +702,7 @@
     }
     cargarCursosD();
     function cargarCursosD() {
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaCurso.php', function (data) {
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaCurso.php', function (data) {
             var select = document.getElementById("cbHorario");
             var table = $("#tablaCursosD"); // selecciona la tabla
             for (var i = 0; i < data.data.length; i++) {

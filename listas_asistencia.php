@@ -77,7 +77,7 @@
     <script src='js/dataTables.bootstrap4.min.js'></script>
     <script>
               $.ajax({
-                url: 'https://arketipo.mx/RH/CursosRH/dao/consultaListasCurso.php', // Reemplaza esto con la URL de tus datos
+                url: 'https://grammermx.com/RH/Cursos/dao/consultaListasCurso.php', // Reemplaza esto con la URL de tus datos
                 dataType: 'json',
                 success: function(data) {
                   $('#dataTable-1').DataTable({
@@ -113,7 +113,7 @@
       gtag('config', 'UA-56159088-1');
 
       function verFormato(curso,horario,fecha) {
-        var link = "https://arketipo.mx/RH/CursosRH/pruebaPDF.php?curso="+curso+"&horario="+horario+"&fecha="+fecha;
+        var link = "https://grammermx.com/RH/Cursos/pruebaPDF.php?curso="+curso+"&horario="+horario+"&fecha="+fecha;
         window.open(link, '_blank');
       }
     </script>

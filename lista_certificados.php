@@ -82,7 +82,7 @@
         var nomina = document.getElementById("nominaSears").value;
         var estadoCer;
         document.getElementById("muroBusqueda").innerHTML='';
-        $.getJSON('https://arketipo.mx/RH/CursosRH/dao/consultaCursoUsuario.php?nomina='+nomina, function (data){
+        $.getJSON('https://grammermx.com/RH/Cursos/dao/consultaCursoUsuario.php?nomina='+nomina, function (data){
           for (var i = 0; i < data.data.length; i++) {
             if (data.data[i].EstatusAsistencia==="3"){
 
