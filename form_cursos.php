@@ -914,22 +914,22 @@
         })
             .then(function (response) {
                 if (response.ok) {
-                    Swal.fire({
+                    return Swal.fire({
                         icon: 'success',
                         title: 'Enviado.',
                         showConfirmButton: true,
                         input: 'none',
                         text: 'Registro enviado.'
-                    })
-
-                    // Agrega un retraso de 3 segundos (3000 milisegundos) antes de recargar la página
-                    setTimeout(function() {
-                        location.reload();
-                    }, 3000);
+                    });
                 } else {
                     throw "Error en la llamada Ajax";
                 }
-
+            })
+            .then(function() {
+                // Agrega un retraso de 3 segundos (3000 milisegundos) antes de recargar la página
+                setTimeout(function() {
+                    location.reload();
+                }, 3000);
             })
             .then(function (texto) {
                 console.log(texto);
