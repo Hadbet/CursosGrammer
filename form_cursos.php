@@ -916,11 +916,16 @@
                 if (response.ok) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Enviado.', showConfirmButton: true, input: 'none',
-                        text: 'Registro enviado.',
-                        timer: 2500
+                        title: 'Enviado.',
+                        showConfirmButton: true,
+                        input: 'none',
+                        text: 'Registro enviado.'
                     })
-                    location.reload();
+
+                    // Agrega un retraso de 3 segundos (3000 milisegundos) antes de recargar la página
+                    setTimeout(function() {
+                        location.reload();
+                    }, 3000);
                 } else {
                     throw "Error en la llamada Ajax";
                 }
