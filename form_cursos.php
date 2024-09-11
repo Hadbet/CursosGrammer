@@ -917,7 +917,7 @@
                     Swal.fire({
                         icon: 'success',
                         title: 'Enviado.', showConfirmButton: true, input: 'none',
-                        text: 'Registro enviado.'
+                        text: 'Registro enviado.',
                         timer: 2500
                     })
                     location.reload();
