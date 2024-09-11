@@ -916,8 +916,9 @@
                 if (response.ok) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Enviado.',
+                        title: 'Enviado.', showConfirmButton: true, input: 'none',
                         text: 'Registro enviado.'
+                        timer: 2500
                     })
                     location.reload();
                 } else {
