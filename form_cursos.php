@@ -699,7 +699,8 @@
                     Swal.fire({
                         icon: 'success',
                         title: 'Enviado.', showConfirmButton: false, input: 'none',
-                        text: 'Registro enviardo.'
+                        text: 'Registro enviarlo.',
+                        timer: 2500
                     })
                     location.reload();
                 }
@@ -914,22 +915,17 @@
         })
             .then(function (response) {
                 if (response.ok) {
-                    return Swal.fire({
+                    Swal.fire({
                         icon: 'success',
-                        title: 'Enviado.',
-                        showConfirmButton: true,
-                        input: 'none',
-                        text: 'Registro enviado.'
-                    });
+                        title: 'Enviado.', showConfirmButton: true, input: 'none',
+                        text: 'Registro enviado.',
+                        timer: 2500
+                    })
+                    location.reload();
                 } else {
                     throw "Error en la llamada Ajax";
                 }
-            })
-            .then(function() {
-                // Agrega un retraso de 3 segundos (3000 milisegundos) antes de recargar la página
-                setTimeout(function() {
-                    location.reload();
-                }, 3000);
+
             })
             .then(function (texto) {
                 console.log(texto);
