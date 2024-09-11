@@ -701,8 +701,8 @@
                         title: 'Enviado.',
                         showConfirmButton: false,
                         input: 'none',
-                        text: 'Registro enviarlo.',
-                        timer: 2500
+                        text: 'Ya esta inscrito en los o el curso.',
+                        timer: 1800
                     });
                 }
             })
