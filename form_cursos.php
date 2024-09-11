@@ -696,19 +696,22 @@
         Promise.all(fetchPromises)
             .then(function () {
                 if (!errorOcurrido) {
-                    Swal.fire({
+                    return Swal.fire({
                         icon: 'success',
-                        title: 'Enviado.', showConfirmButton: false, input: 'none',
+                        title: 'Enviado.',
+                        showConfirmButton: false,
+                        input: 'none',
                         text: 'Registro enviarlo.',
                         timer: 2500
-                    })
-                    location.reload();
+                    });
                 }
+            })
+            .then(function() {
+                location.reload();
             })
             .catch(function (err) {
                 console.log(err);
             });
-
 
     }
 
