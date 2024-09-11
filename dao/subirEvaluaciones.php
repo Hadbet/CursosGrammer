@@ -53,7 +53,7 @@ echo $parts[1]; // 2024-04-29
 echo $parts[2]; // 17:32 - 19:32
 
 echo '<script type="text/javascript">
-           window.location = "../form_cursos_admin_calificacion.html?curso='.$parts[0].'&fecha='.$parts[1].'&horario='.$parts[2].'"
+           window.location = "../form_cursos_admin_calificacion.php?curso='.$parts[0].'&fecha='.$parts[1].'&horario='.$parts[2].'"
       </script>';
 
 ?>
